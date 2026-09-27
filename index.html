@@ -32,9 +32,13 @@
     .screenshot-card { margin:0; padding:16px; border:1px solid var(--line); border-radius:18px; background:var(--paper); text-align:center; }
     .screenshot-card img { display:block; width:min(100%,280px); height:auto; margin:0 auto; border:1px solid var(--line); border-radius:12px; }
     .screenshot-card figcaption { margin-top:14px; color:var(--muted); font-size:.95rem; }
+    .profile { max-width:720px; margin:0; border-top:1px solid var(--line); }
+    .profile-row { display:grid; grid-template-columns:10rem 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); }
+    .profile dt { color:var(--muted); }
+    .profile dd { margin:0; font-weight:600; }
     .privacy { padding:24px; border-radius:14px; background:var(--paper); }
     footer { padding:28px 0 42px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-    @media (max-width:700px) { header { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 18px 0 0; } .hero { padding:52px 0 60px; } .product,.steps,.features,.screenshots { grid-template-columns:1fr; } section { padding:48px 0; } }
+    @media (max-width:700px) { header { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 18px 0 0; } .hero { padding:52px 0 60px; } .product,.steps,.features,.screenshots { grid-template-columns:1fr; } .profile-row { grid-template-columns:1fr; gap:4px; } section { padding:48px 0; } }
   </style>
 </head>
 <body>
@@ -42,6 +46,7 @@
     <div class="brand">BEYCIS</div>
     <nav aria-label="ページ内メニュー">
       <a href="#business">事業内容</a>
+      <a href="#operator">運営者情報</a>
       <a href="#kiri">Kiri</a>
       <a href="#process">利用の流れ</a>
       <a href="#pricing">料金</a>
@@ -59,6 +64,17 @@
       <h2>事業内容</h2>
       <p>スマートフォン向けソフトウェアの企画・開発。現在は、動画の発話部分を活かして編集できるAndroidアプリ「Kiri」の開発に取り組んでいます。</p>
       <p class="muted">アプリの機能、対象環境、利用手順を具体的にご案内します。</p>
+    </section>
+
+    <section id="operator">
+      <p class="eyebrow">OPERATOR</p>
+      <h2>運営者情報</h2>
+      <dl class="profile">
+        <div class="profile-row"><dt>屋号</dt><dd>BEYCIS</dd></div>
+        <div class="profile-row"><dt>事業形態</dt><dd>個人事業</dd></div>
+        <div class="profile-row"><dt>事業内容</dt><dd>スマートフォン向けソフトウェアの企画・開発</dd></div>
+        <div class="profile-row"><dt>開発中の製品</dt><dd>Kiri（Androidアプリ）</dd></div>
+      </dl>
     </section>
 
     <section id="kiri">
