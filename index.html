@@ -3,48 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="好きなものと、誰かに必要なもの。その重なりから道具や遊びをつくるBEYCISの小さなソフトウェア工房です。">
+  <meta name="description" content="好きなものと、誰かに必要なもの。その重なりから道具や遊びをつくるBEYCIS。KiriとGALACTICA ATTACKを紹介します。">
   <meta name="theme-color" content="#f4e84b">
   <title>BEYCIS — つくって、ためして、ちょっといい明日を。</title>
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=vision-4">
 </head>
 <body class="home-page">
   <header class="site-header">
     <a class="wordmark" href="index.html" aria-label="BEYCIS ホーム">BEYCIS</a>
     <nav class="site-nav" aria-label="メインメニュー">
-      <a href="#products">つくったもの</a>
-      <a href="#about">BEYCISについて</a>
+      <a href="#products">製品を見る</a>
+      <a href="about.html">BEYCISについて</a>
       <a href="privacy.html">プライバシー</a>
     </nav>
   </header>
 
-  <main>
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="hero-copy">
-        <p class="eyebrow">SMALL IDEAS, BRIGHTER DAYS</p>
-        <h1 id="home-title">みんなが昨日より<br>すこしだけハッピーになる<br>せかいをつくる。</h1>
-        <p class="hero-lead">好きなものをつくって、ためして。<br>「ちょっと見てみて」と差し出す、小さなソフトウェア工房です。</p>
-        <a class="text-link" href="#products">できたものを見る <span aria-hidden="true">↓</span></a>
-      </div>
-      <p class="hero-note paper-note paper-note--blue">好きなものと、<br>誰かに必要なもの。<br>その重なるところから。</p>
-      <div class="hero-stamp" aria-hidden="true">TOOLS<br><span>&</span><br>PLAY</div>
-    </section>
+  <div class="desk-sprinkles" aria-hidden="true">
+    <img class="desk-prop desk-prop--pencil" src="assets/images/desk-pencil.png" alt="">
+    <img class="desk-prop desk-prop--ruler" src="assets/images/desk-ruler.png" alt="">
+    <img class="desk-prop desk-prop--eraser" src="assets/images/desk-eraser.png" alt="">
+    <img class="desk-prop desk-prop--scissors" src="assets/images/desk-scissors.png" alt="">
+    <img class="desk-prop desk-prop--keyboard" src="assets/images/desk-keyboard.png" alt="">
+    <img class="desk-prop desk-prop--mouse" src="assets/images/desk-mouse.png" alt="">
+  </div>
 
+  <main class="home-dashboard">
     <section class="products-section" id="products" aria-labelledby="products-title">
       <div class="section-heading">
-        <p class="eyebrow">01 / THINGS WE MADE</p>
-        <h2 id="products-title">机の上にあるもの。</h2>
-        <p>小さな道具も、遊びも。いま形になっているものを並べています。</p>
+        <div>
+          <p class="eyebrow">BEYCISのビジョン</p>
+          <h2 id="products-title">みんなが昨日よりすこしだけハッピーになるせかいをつくる。</h2>
+          <p>気になるフロッピーを、のぞいてみて。</p>
+          <div class="carousel-controls" role="group" aria-label="製品を移動">
+            <button class="carousel-button" type="button" data-carousel-previous aria-label="前の製品へ" disabled>←</button>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="次の製品へ">→</button>
+          </div>
+        </div>
       </div>
 
-      <div class="product-grid">
-        <!-- 製品を追加するときは、このarticleを複製し、専用の詳細ページへリンクしてください。 -->
-        <article class="product-card product-card--kiri">
+      <div class="product-carousel" data-product-carousel>
+        <div class="product-carousel-viewport" data-carousel-viewport tabindex="0" role="region" aria-label="製品一覧。左右にスクロールできます。">
+          <div class="product-grid product-track" role="list">
+        <!-- 製品を追加するときは、このarticleを複製し、専用ページとロゴを設定してください。 -->
+        <article class="product-card product-card--kiri" role="listitem">
           <a class="disk-link" href="products/kiri.html" aria-label="Kiriの紹介を見る">
             <span class="disk-tilt">
-              <img class="disk-image" src="assets/images/floppy-disk.png" alt="Kiriのロゴを載せた白いフロッピーディスク">
+              <img class="disk-image" src="assets/images/floppy-disk.png" alt="Kiriのアイコンと名前を印字した白いフロッピーディスク">
               <span class="disk-label" aria-hidden="true">
-                <span class="kiri-mark"><span></span><span></span><span></span></span>
+                <span class="disk-app-icon disk-app-icon--kiri"><img src="assets/images/kiri-app-icon-foreground.png" alt=""></span>
                 <span class="disk-name">Kiri</span>
               </span>
             </span>
@@ -52,43 +58,40 @@
           <div class="product-copy">
             <p class="product-meta">ANDROID APP <span>／</span> 開発中</p>
             <h3>Kiri</h3>
-            <p class="product-for">動画の長い無音部分を、手早く整えたい人へ。</p>
-            <p class="product-description">発話区間を見つけて、無言の間を調整できるAndroid向け動画編集アプリです。</p>
-            <p class="maker-note">音声に合わせて「間」を整える発想が好きで、作っています。</p>
-            <a class="text-link" href="products/kiri.html">Kiriをのぞいてみる <span aria-hidden="true">↗</span></a>
+            <p class="product-description">動画の長い無音を、手早く整えたい人へ。</p>
+            <a class="text-link" href="products/kiri.html">中をのぞく <span aria-hidden="true">↗</span></a>
           </div>
         </article>
 
-        <aside class="desk-note" aria-label="作り手のメモ">
-          <p class="paper-note paper-note--coral">次はどんなものを<br>つくろうかな。</p>
-          <p class="desk-note-caption">ツールもゲームも、<br>思いついたらまず試作。</p>
-          <span class="desk-note-index">A NOTE FROM THE DESK</span>
-        </aside>
-      </div>
-    </section>
-
-    <section class="about-section" id="about" aria-labelledby="about-title">
-      <div class="about-heading">
-        <p class="eyebrow">02 / ABOUT BEYCIS</p>
-        <h2 id="about-title">好きなものを、<br>誰かの小さなハッピーに。</h2>
-      </div>
-      <div class="about-copy">
-        <p>BEYCISは、作り手が好きで夢中になれることと、誰かにとって必要なことが重なるところから、道具や遊びをつくります。</p>
-        <p>多くの人には小さく見えても、特定の人には切実な困りごと。気分を明るくする遊び。新しい発想から生まれる、まだない体験。できたものを「ちょっと見てみて」と、ここに置いていきます。</p>
-        <dl class="operator-info">
-          <div><dt>屋号</dt><dd>BEYCIS</dd></div>
-          <div><dt>事業形態</dt><dd>個人事業</dd></div>
-          <div><dt>事業内容</dt><dd>ソフトウェアの企画・開発</dd></div>
-        </dl>
+        <article class="product-card product-card--game" role="listitem">
+          <a class="disk-link" href="products/galactica-attack.html" aria-label="GALACTICA ATTACKの紹介を見る">
+            <span class="disk-tilt">
+              <img class="disk-image" src="assets/images/floppy-disk.png" alt="GALACTICA ATTACKのロゴと名前を印字した白いフロッピーディスク">
+              <span class="disk-label disk-label--galactica" aria-hidden="true">
+                <span class="disk-app-icon"><img src="assets/images/galactica-app-icon.png" alt=""></span>
+                <span class="disk-name">GALACTICA<br>ATTACK</span>
+              </span>
+            </span>
+          </a>
+          <div class="product-copy">
+            <p class="product-meta">ANDROID GAME <span>／</span> PUZZLE</p>
+            <h3>GALACTICA ATTACK</h3>
+            <p class="product-description">宝石をつないで連鎖をねらう、宇宙のパズルゲーム。</p>
+            <a class="text-link" href="products/galactica-attack.html">中をのぞく <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <a class="wordmark" href="index.html" aria-label="BEYCIS ホーム">BEYCIS</a>
-    <p>つくって、ためして、ちょっといい明日を。</p>
-    <a href="privacy.html">プライバシーについて</a>
+    <a href="about.html">BEYCISについて</a>
+    <a href="privacy.html">プライバシー</a>
     <small>© 2026 BEYCIS</small>
   </footer>
+  <script src="assets/js/product-carousel.js?v=vision-4" defer></script>
 </body>
 </html>
