@@ -4,25 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="BEYCISウェブサイトにおける情報の取り扱いについて。">
+  <meta name="theme-color" content="#f4e84b">
   <title>プライバシーについて | BEYCIS</title>
-  <style>
-    :root { color-scheme:light; --ink:#172126; --muted:#52626a; --line:#d9e2e5; --accent:#087e8b; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); background:#fff; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.8; }
-    header, main, footer { width:min(100% - 40px, 760px); margin-inline:auto; }
-    header { padding:24px 0; border-bottom:1px solid var(--line); }
-    header a, footer a { color:var(--accent); }
-    main { padding:52px 0 72px; }
-    h1 { margin:0 0 12px; font-size:clamp(2rem,6vw,3rem); line-height:1.25; }
-    h2 { margin:36px 0 10px; font-size:1.25rem; }
-    p { margin:0 0 16px; }
-    .muted { color:var(--muted); }
-    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-  </style>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <header><a href="index.html">BEYCIS</a></header>
-  <main>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="BEYCIS ホーム">BEYCIS</a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="index.html#products">つくったもの</a>
+      <a href="index.html#about">BEYCISについて</a>
+    </nav>
+  </header>
+  <main class="legal-main">
+    <p class="eyebrow">PRIVACY</p>
     <h1>プライバシーについて</h1>
     <p class="muted">制定日：2026年9月27日</p>
     <p>このページでは、BEYCISウェブサイト（beycis.jp）における情報の取り扱いを説明します。Kiriアプリのデータ取り扱いについては、このページの対象に含めず、アプリ公開前にアプリ用のプライバシーポリシーを別途掲載します。</p>
@@ -41,7 +36,12 @@
 
     <h2>内容の変更</h2>
     <p>当サイトの内容や利用サービスに変更があった場合、このページを更新します。</p>
+    <a class="back-link" href="index.html">← BEYCISへ戻る</a>
   </main>
-  <footer>© 2026 BEYCIS</footer>
+  <footer class="site-footer legal-footer">
+    <a class="wordmark" href="index.html" aria-label="BEYCIS ホーム">BEYCIS</a>
+    <p>つくって、ためして、ちょっといい明日を。</p>
+    <small>© 2026 BEYCIS</small>
+  </footer>
 </body>
 </html>
