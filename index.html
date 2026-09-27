@@ -1,89 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BEYCIS</title>
-  <meta name="description" content="BEYCISは、日常のちょっとした不便を解決するソフトウェアを開発しています。">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BEYCISは、動画編集の手間を減らすAndroidアプリ Kiri を企画・開発しています。">
+  <title>BEYCIS | Androidソフトウェア開発</title>
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #ffffff;
-      color: #222222;
-      line-height: 1.7;
-    }
-
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      color: #666666;
-      margin-bottom: 64px;
-    }
-
-    section {
-      margin-bottom: 56px;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .app {
-      border-top: 1px solid #dddddd;
-      padding-top: 24px;
-    }
-
-    footer {
-      border-top: 1px solid #eeeeee;
-      margin-top: 80px;
-      padding-top: 24px;
-      color: #777777;
-      font-size: 14px;
-    }
+    :root { color-scheme: light; --ink:#172126; --muted:#52626a; --line:#d9e2e5; --accent:#087e8b; --paper:#f5f8f8; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#fff; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.8; }
+    header, main, footer { width:min(100% - 40px, 960px); margin-inline:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:24px 0; }
+    .brand { font-weight:800; letter-spacing:.12em; }
+    nav a { color:var(--muted); text-decoration:none; margin-left:24px; font-size:.95rem; }
+    .hero { padding:76px 0 82px; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.08em; }
+    h1 { max-width:780px; margin:14px 0 20px; font-size:clamp(2.4rem,7vw,4.6rem); line-height:1.18; letter-spacing:-.04em; }
+    .lead { max-width:680px; color:var(--muted); font-size:1.15rem; }
+    section { padding:64px 0; border-top:1px solid var(--line); }
+    h2 { margin:0 0 20px; font-size:clamp(1.65rem,4vw,2.25rem); line-height:1.35; }
+    h3 { margin:0 0 10px; font-size:1.2rem; }
+    p { margin:0 0 16px; }
+    .muted { color:var(--muted); }
+    .product { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+    .badge { display:inline-block; padding:4px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:.85rem; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:30px; }
+    .step, .feature { padding:20px; border:1px solid var(--line); border-radius:14px; background:#fff; }
+    .step b { display:block; margin-bottom:8px; color:var(--accent); }
+    .features { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
+    .privacy { padding:24px; border-radius:14px; background:var(--paper); }
+    footer { padding:28px 0 42px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    @media (max-width:700px) { header { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 18px 0 0; } .hero { padding:52px 0 60px; } .product,.steps,.features { grid-template-columns:1fr; } section { padding:48px 0; } }
   </style>
 </head>
-
 <body>
+  <header>
+    <div class="brand">BEYCIS</div>
+    <nav aria-label="ページ内メニュー">
+      <a href="#business">事業内容</a>
+      <a href="#kiri">Kiri</a>
+      <a href="#process">利用の流れ</a>
+      <a href="#pricing">料金</a>
+    </nav>
+  </header>
   <main>
-    <header>
-      <h1>BEYCIS</h1>
-      <p class="subtitle">Software Development</p>
-    </header>
-
-    <section>
-      <h2>About</h2>
-      <p>
-        BEYCISは、日常のちょっとした不便を解決する、
-        シンプルで実用的なソフトウェアを開発しています。
-      </p>
+    <section class="hero" style="border-top:0">
+      <p class="eyebrow">ANDROID SOFTWARE DEVELOPMENT</p>
+      <h1>動画編集の、無言の時間を整える。</h1>
+      <p class="lead">BEYCISは、動画内の発話を検出して不要な無音部分をカットするAndroidアプリ「Kiri」を企画・開発しています。</p>
     </section>
 
-    <section>
-      <h2>Products</h2>
+    <section id="business">
+      <p class="eyebrow">BUSINESS</p>
+      <h2>事業内容</h2>
+      <p>スマートフォン向けソフトウェアの企画・開発。現在は、動画の発話部分を活かして編集できるAndroidアプリ「Kiri」の開発に取り組んでいます。</p>
+      <p class="muted">アプリの機能、対象環境、利用手順を具体的にご案内します。</p>
+    </section>
 
-      <div class="app">
-        <h3>Kiri</h3>
-        <p>
-          動画内の発話部分を端末上で解析し、
-          不要な部分をカットして書き出すAndroid向け動画編集アプリです。
-        </p>
+    <section id="kiri">
+      <p class="eyebrow">PRODUCT</p>
+      <div class="product">
+        <div>
+          <span class="badge">Androidアプリ</span>
+          <h2 style="margin-top:14px">Kiri</h2>
+          <p>Kiriは、動画の音声を解析して発話区間を検出し、長い無音部分を短く整えるAndroid動画編集アプリです。現在は一般公開前です。</p>
+        </div>
+        <div class="features">
+          <article class="feature"><h3>発話区間を解析</h3><p class="muted">動画内の音声から、人が話している区間を検出します。</p></article>
+          <article class="feature"><h3>カット具合を調整</h3><p class="muted">弱・中・強の設定を切り替えて、発話前後に残す間を調整できます。</p></article>
+          <article class="feature"><h3>書き出し前にプレビュー</h3><p class="muted">編集後のつながりを確認してから保存できます。</p></article>
+          <article class="feature"><h3>動画として保存</h3><p class="muted">編集結果をMP4形式で端末のギャラリーへ保存します。</p></article>
+        </div>
       </div>
     </section>
 
-    <footer>
-      © 2026 BEYCIS
-    </footer>
+    <section id="pricing">
+      <p class="eyebrow">PRICING</p>
+      <h2>無料で始められ、書き出しは買い切り課金</h2>
+      <p>アプリのインストール、動画の選択、音声解析、カット強度の調整、プレビューは無料です。完成動画の書き出しは、アプリ内課金「Kiri Pro」の買い切りで解放する設計です。</p>
+      <p class="muted">販売価格は一般公開時にGoogle Play上で表示します。</p>
+    </section>
+    <section id="process">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>利用の流れ</h2>
+      <div class="steps">
+        <article class="step"><b>01</b><h3>動画を選ぶ</h3><p class="muted">端末内の動画を選択します。</p></article>
+        <article class="step"><b>02</b><h3>発話を解析</h3><p class="muted">音声を解析し、発話区間を検出します。</p></article>
+        <article class="step"><b>03</b><h3>カットを確認</h3><p class="muted">カット強度を選び、プレビューで仕上がりを確認します。</p></article>
+        <article class="step"><b>04</b><h3>動画を保存</h3><p class="muted">編集した動画を端末へ書き出します。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <p class="eyebrow">ON-DEVICE PROCESSING</p>
+      <h2>動画の解析・編集は端末内で</h2>
+      <div class="privacy"><p>動画・音声の解析、プレビュー、書き出しは端末内で行います。動画データを外部サーバーへ送信しません。購入処理にはGoogle Playを使用します。</p></div>
+    </section>
   </main>
+  <footer>© 2026 BEYCIS</footer>
 </body>
 </html>
+
