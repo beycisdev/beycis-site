@@ -28,9 +28,13 @@
     .step, .feature { padding:20px; border:1px solid var(--line); border-radius:14px; background:#fff; }
     .step b { display:block; margin-bottom:8px; color:var(--accent); }
     .features { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:24px; }
+    .screenshots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:36px; }
+    .screenshot-card { margin:0; padding:16px; border:1px solid var(--line); border-radius:18px; background:var(--paper); text-align:center; }
+    .screenshot-card img { display:block; width:min(100%,280px); height:auto; margin:0 auto; border:1px solid var(--line); border-radius:12px; }
+    .screenshot-card figcaption { margin-top:14px; color:var(--muted); font-size:.95rem; }
     .privacy { padding:24px; border-radius:14px; background:var(--paper); }
     footer { padding:28px 0 42px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-    @media (max-width:700px) { header { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 18px 0 0; } .hero { padding:52px 0 60px; } .product,.steps,.features { grid-template-columns:1fr; } section { padding:48px 0; } }
+    @media (max-width:700px) { header { align-items:flex-start; gap:12px; flex-direction:column; } nav a { margin:0 18px 0 0; } .hero { padding:52px 0 60px; } .product,.steps,.features,.screenshots { grid-template-columns:1fr; } section { padding:48px 0; } }
   </style>
 </head>
 <body>
@@ -71,6 +75,16 @@
           <article class="feature"><h3>書き出し前にプレビュー</h3><p class="muted">編集後のつながりを確認してから保存できます。</p></article>
           <article class="feature"><h3>動画として保存</h3><p class="muted">編集結果をMP4形式で端末のギャラリーへ保存します。</p></article>
         </div>
+      </div>
+      <div class="screenshots" aria-label="Kiriのアプリ画面">
+        <figure class="screenshot-card">
+          <img src="assets/images/kiri-home-screen.jpg" alt="Kiriのホーム画面。動画を選ぶボタンが表示されている。" width="549" height="1280" loading="lazy">
+          <figcaption>動画を選んで編集を開始</figcaption>
+        </figure>
+        <figure class="screenshot-card">
+          <img src="assets/images/kiri-edit-screen.jpg" alt="Kiriの編集画面。動画プレビュー、カット率、カット強度の選択肢が表示されている。" width="549" height="1280" loading="lazy">
+          <figcaption>プレビューでカット具合を確認</figcaption>
+        </figure>
       </div>
     </section>
 
