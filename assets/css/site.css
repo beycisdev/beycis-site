@@ -187,6 +187,29 @@ main,
 .legal-main a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .legal-footer { padding-top: 16px; }
 
+.kiri-policy-main { padding-top: 34px; }
+.kiri-policy-main .breadcrumb { margin: 0 0 18px; }
+.policy-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-bottom: 14px; margin-bottom: 34px; border-bottom: 1px solid var(--rule); }
+.policy-toolbar .eyebrow { margin: 0; }
+.policy-language { display: flex; align-items: center; gap: 10px; font-size: .8rem; }
+.policy-language a { text-decoration: none; border-bottom: 1px solid currentColor; }
+.policy-language [aria-current="page"] { font-weight: 800; border-bottom: 2px solid currentColor; }
+.kiri-policy { line-height: 1.9; overflow-wrap: break-word; }
+.kiri-policy h1 { margin: 0 0 34px; font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.2; letter-spacing: -.06em; }
+.kiri-policy h2 { margin: 38px 0 14px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: clamp(1.12rem, 2.2vw, 1.35rem); line-height: 1.5; letter-spacing: -.025em; }
+.kiri-policy p { margin: 0 0 18px; line-height: 1.9; }
+.kiri-policy ul { margin: 0 0 20px; padding-left: 1.35em; }
+.kiri-policy li { margin: 0 0 .7em; padding-left: .1em; line-height: 1.9; }
+.kiri-policy li:last-child { margin-bottom: 0; }
+@media (max-width: 620px) {
+  .kiri-policy-main { padding-top: 28px; }
+  .policy-toolbar { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .policy-language { gap: 12px; }
+  .kiri-policy h1 { margin-bottom: 28px; font-size: clamp(1.45rem, 7vw, 2.45rem); }
+  .kiri-policy h2 { margin-top: 32px; padding-top: 16px; }
+}
+
+
 @media (max-width: 900px) {
   .site-header, main, .site-footer { width: min(calc(100% - 40px), var(--content)); }
   .legal-main { width: min(calc(100% - 40px), 760px); }
