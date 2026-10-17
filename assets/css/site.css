@@ -232,7 +232,7 @@ main,
 @media (max-width: 620px) {
   .site-header, main, .site-footer { width: min(calc(100% - 32px), var(--content)); }
   .legal-main { width: min(calc(100% - 32px), 760px); padding: 48px 0 64px; }
-  .wordmark img { height: 22px; }
+  .wordmark img { height: 16px; }
   .site-header { min-height: 40px; align-items: center; flex-direction: row; justify-content: space-between; gap: 8px; padding: 6px 0; }
   .site-nav { flex: 1 1 auto; min-width: 0; justify-content: flex-end; gap: 4px 8px; }
   .site-nav a { font-size: .64rem; }
