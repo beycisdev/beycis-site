@@ -153,6 +153,11 @@ main,
 .product-hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 60px; min-height: 490px; padding: 32px 4% 72px; border-bottom: 1px solid var(--rule); }
 .product-hero h1 { margin: 0 0 20px; font-size: clamp(3.2rem, 7vw, 6rem); line-height: .95; letter-spacing: -.08em; }
 .product-hero .lead { max-width: 540px; margin: 0 0 24px; font-size: 1.08rem; font-weight: 600; }
+.product-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.product-actions { margin-top: 24px; }
+.store-button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; max-width: 100%; padding: 12px 20px; border: 1px solid var(--ink); color: var(--field); background: var(--ink); font-size: .9rem; font-weight: 800; line-height: 1.5; text-decoration: none; }
+.store-button:hover { color: var(--ink); background: transparent; }
+.store-note { margin: 10px 0 0; color: var(--muted); font-size: .72rem; }
 .status-label { display: inline-block; padding: 5px 10px; border: 1px solid var(--rule); font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
 .product-visual { width: min(100%, 300px); margin: auto; }
 .product-visual .disk-label { gap: 2px; }
@@ -178,6 +183,10 @@ main,
 .screenshot-zoom:hover img { transform: scale(1.015); }
 .screenshot-hint { margin: -12px 0 24px; color: var(--muted); font-size: .78rem; }
 .screenshot figcaption { margin-top: 12px; text-align: center; font-size: .82rem; }
+.screenshots.screenshots--store { grid-template-columns: repeat(5, minmax(200px, 1fr)); gap: 22px; overflow-x: auto; padding-bottom: 16px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+.screenshots--store .screenshot { min-width: 0; scroll-snap-align: start; }
+.screenshots--store .screenshot-zoom { max-width: 240px; }
+.screenshots--store .screenshot-zoom img { border: 0; }
 .price-line { padding: 22px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-size: 1.1rem; font-weight: 800; }
 .detail-note { max-width: 760px; margin-top: 18px; padding: 17px 20px; background: var(--paper); font-size: .88rem; }
 .back-link { display: inline-block; margin-top: 42px; font-size: .86rem; font-weight: 800; }
@@ -232,6 +241,7 @@ main,
 
 @media (max-width: 620px) {
   .site-header, main, .site-footer { width: min(calc(100% - 32px), var(--content)); }
+  .screenshots.screenshots--store { grid-template-columns: repeat(5, min(76vw, 240px)); gap: 18px; }
   .legal-main { width: min(calc(100% - 32px), 760px); padding: 48px 0 64px; }
   .wordmark img { height: 16px; }
   .site-header { min-height: 40px; align-items: center; flex-direction: row; justify-content: space-between; gap: 8px; padding: 6px 0; }
